@@ -26,7 +26,7 @@ public class UserController {
 		return "login";
 	}
 
-	@PostMapping("/validate")
+	@PostMapping("/validate") 
 	public String validate(@RequestParam("email") String email, @RequestParam("password") String password) {
 		User user = userDAO.validate(email, password);
 		if (user != null) {
